@@ -1,0 +1,12 @@
+diff -ruN apache-airflow-providers-papermill-1.0.2/setup.py apache-airflow-providers-papermill-1.0.2-patch/setup.py
+--- apache-airflow-providers-papermill-1.0.2/setup.py	2021-03-08 00:09:44.000000000 +0100
++++ apache-airflow-providers-papermill-1.0.2-patch/setup.py	2021-03-08 09:25:56.123949011 +0100
+@@ -57,7 +57,7 @@
+         ),
+         zip_safe=False,
+         include_package_data=True,
+-        install_requires=['apache-airflow>=2.0.0', 'nteract-scrapbook[all]>=0.3.1', 'papermill[all]>=1.2.1'],
++        install_requires=['apache-airflow>=2.0.0', 'scrapbook[all]>=0.3.1', 'papermill[all]>=1.2.1'],
+         setup_requires=['setuptools', 'wheel'],
+         extras_require={},
+         classifiers=[
