@@ -9,10 +9,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-papermill-{{ version }}.tar.gz
   sha256: 92cbfabec4951bd73a3c9e5ce80c0ab920c23eaa2a3226bbc7f5af514f372b73
-  patches:
-    # The dependency has been renamed and the old name is giving pip-check
-    # trouble because the old name is now a metapackage
-    - 0001-rename-scrapbook.patch
 
 build:
   number: 0
