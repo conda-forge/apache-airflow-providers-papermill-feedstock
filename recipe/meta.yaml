@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-papermill" %}
-{% set version = "1.0.2" %}
+{% set version = "2.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-papermill-{{ version }}.tar.gz
-  sha256: 6cb476889b99105e6ffb327cf18d5a16611bd2483c3e09102c1b0e64d072871e
+  sha256: 92cbfabec4951bd73a3c9e5ce80c0ab920c23eaa2a3226bbc7f5af514f372b73
   patches:
     # The dependency has been renamed and the old name is giving pip-check
     # trouble because the old name is now a metapackage
