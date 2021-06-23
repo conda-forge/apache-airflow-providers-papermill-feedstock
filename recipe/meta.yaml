@@ -26,8 +26,8 @@ requirements:
     - setuptools
     - wheel
   run:
-    - apache-airflow >=2.0.0
-    - scrapbook >=0.3.1
+    - apache-airflow >=2.1.0
+    - scrapbook
     - papermill >=1.2.1
     - python >=3.6
 
