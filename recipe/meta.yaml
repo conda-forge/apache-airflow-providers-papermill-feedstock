@@ -17,15 +17,16 @@ build:
 
 requirements:
   host:
+    - python >=3.7
     - pip
-    - python >=3.6
     - setuptools
-    - wheel
   run:
+    - python >=3.7
     - apache-airflow >=2.1.0
-    - scrapbook
+    # note: this is just the base papermill, not papermill[all] that it should be
     - papermill >=1.2.1
-    - python >=3.6
+    # note: this is just the base scrapbook, not scrapbook[all] that it should be
+    - scrapbook
 
 test:
   imports:
