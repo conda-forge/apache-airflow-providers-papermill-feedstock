@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-papermill" %}
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-papermill-{{ version }}.tar.gz
-  sha256: 7556ce41558b0feee9b71a6834b36bfa0f772c12699936567ae3d48269dedbd0
+  sha256: d6713f010c35d38fb27a4193ae88c97f170eeb775182a5df593fbbe0373d0206
 
 build:
   number: 0
@@ -17,15 +17,16 @@ build:
 
 requirements:
   host:
+    - python >=3.7
     - pip
-    - python >=3.6
     - setuptools
-    - wheel
   run:
+    - python >=3.7
     - apache-airflow >=2.1.0
-    - scrapbook
+    # note: this is just the base papermill, not papermill[all] that it should be
     - papermill >=1.2.1
-    - python >=3.6
+    # note: this is just the base scrapbook, not scrapbook[all] that it should be
+    - scrapbook
 
 test:
   imports:
