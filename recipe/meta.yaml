@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-papermill" %}
-{% set version = "2.2.0" %}
+{% set version = "2.2.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-papermill-{{ version }}.tar.gz
-  sha256: d6713f010c35d38fb27a4193ae88c97f170eeb775182a5df593fbbe0373d0206
+  sha256: 0697469c2c809fb64792547d084fd05c4df1d6152f7ba716347ea4549bea0e7c
 
 build:
   number: 0
@@ -23,10 +23,17 @@ requirements:
   run:
     - python >=3.7
     - apache-airflow >=2.1.0
-    # note: this is just the base papermill, not papermill[all] that it should be
     - papermill >=1.2.1
-    # note: this is just the base scrapbook, not scrapbook[all] that it should be
+    # papermill[all]
+    - azure-datalake-store >=0.0.30
+    - azure-storage-blob >=12.1.0
+    - requests >=2.21.0
+    - gcsfs >=0.2.0
+    - pyarrow
+    - boto3
+    
     - scrapbook
+    # scrapbook[all] just requires papermill[all] so we're good
 
 test:
   imports:
