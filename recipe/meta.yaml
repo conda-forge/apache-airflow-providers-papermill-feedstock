@@ -27,7 +27,7 @@ requirements:
     # papermill[all]
     - azure-datalake-store >=0.0.30
     - azure-storage-blob >=12.1.0
-    - requests >= 2.21.0
+    - requests >=2.21.0
     - gcsfs >=0.2.0
     - pyarrow
     - boto3
