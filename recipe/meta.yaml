@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-papermill" %}
-{% set version = "2.2.1" %}
-
+{% set version = "2.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-papermill-{{ version }}.tar.gz
-  sha256: 0697469c2c809fb64792547d084fd05c4df1d6152f7ba716347ea4549bea0e7c
+  sha256: 28c621d64d17cdb22b27324c8677e76839f378a128f7aa75775c5e08f6606305
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
@@ -31,10 +30,9 @@ requirements:
     - gcsfs >=0.2.0
     - pyarrow
     - boto3
-    
+
     - scrapbook
     # scrapbook[all] just requires papermill[all] so we're good
-
 test:
   imports:
     - airflow.providers.papermill
@@ -46,9 +44,10 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Papermill for Apache Airflow
+  summary: Provider for Apache Airflow. Implements apache-airflow-providers-papermill package
   license: Apache-2.0
   license_file: LICENSE
+  license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-papermill/stable/index.html
   dev_url: https://github.com/apache/airflow/
 
