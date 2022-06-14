@@ -23,7 +23,16 @@ requirements:
     - python >=3.7
     - apache-airflow >=2.2.0
     - papermill >=1.2.1
+    # papermill[all]
+    - azure-datalake-store >=0.0.30
+    - azure-storage-blob >=12.1.0
+    - requests >=2.21.0
+    - gcsfs >=0.2.0
+    - pyarrow
+    - boto3
+    
     - scrapbook
+    # scrapbook[all] just requires papermill[all] so we're good
 
 test:
   imports:
