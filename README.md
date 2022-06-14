@@ -7,7 +7,7 @@ Package license: Apache-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/apache-airflow-providers-papermill-feedstock/blob/main/LICENSE.txt)
 
-Summary: Provider for Papermill for Apache Airflow
+Summary: Provider for Apache Airflow. Implements apache-airflow-providers-papermill package
 
 Development: https://github.com/apache/airflow/
 
@@ -43,16 +43,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `apache-airflow-providers-papermill` can be installed with:
+Once the `conda-forge` channel has been enabled, `apache-airflow-providers-papermill` can be installed with `conda`:
 
 ```
 conda install apache-airflow-providers-papermill
 ```
 
-It is possible to list all of the versions of `apache-airflow-providers-papermill` available on your platform with:
+or with `mamba`:
+
+```
+mamba install apache-airflow-providers-papermill
+```
+
+It is possible to list all of the versions of `apache-airflow-providers-papermill` available on your platform with `conda`:
 
 ```
 conda search apache-airflow-providers-papermill --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search apache-airflow-providers-papermill --channel conda-forge
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search apache-airflow-providers-papermill --channel conda-forge
+
+# List packages depending on `apache-airflow-providers-papermill`:
+mamba repoquery whoneeds apache-airflow-providers-papermill --channel conda-forge
+
+# List dependencies of `apache-airflow-providers-papermill`:
+mamba repoquery depends apache-airflow-providers-papermill --channel conda-forge
 ```
 
 
@@ -70,10 +95,12 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
-packages to the [conda-forge](https://anaconda.org/conda-forge)
-[Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
+[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
+[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
+[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+it is possible to build and upload installable packages to the
+[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
