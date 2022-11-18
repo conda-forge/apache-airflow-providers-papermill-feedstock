@@ -21,7 +21,7 @@ requirements:
     - setuptools
   run:
     - python >=3.7
-    - apache-airflow >=2.2.0
+    - apache-airflow >=2.3.0
     - papermill >=1.2.1
     # papermill[all]
     - azure-datalake-store >=0.0.30
