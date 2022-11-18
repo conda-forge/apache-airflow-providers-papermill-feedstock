@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-papermill" %}
-{% set version = "3.0.0" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-papermill-{{ version }}.tar.gz
-  sha256: ba4ab29ae922babe4e42fb9ecb3dc2f9fed01cf5c05942ac1727f1963478bc9a
+  sha256: 4a0814d266a64d68b3f09fd41bc013444c8cc26e68d9b2f4d1c61a95d7d83805
 
 build:
   noarch: python
@@ -30,7 +30,7 @@ requirements:
     - gcsfs >=0.2.0
     - pyarrow
     - boto3
-    
+
     - scrapbook
     # scrapbook[all] just requires papermill[all] so we're good
 
