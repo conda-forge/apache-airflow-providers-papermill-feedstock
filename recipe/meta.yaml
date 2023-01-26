@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-papermill" %}
-{% set version = "3.1.0" %}
+{% set version = "3.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-papermill-{{ version }}.tar.gz
-  sha256: 4a0814d266a64d68b3f09fd41bc013444c8cc26e68d9b2f4d1c61a95d7d83805
+  sha256: 03010fd759a17a455256a32376405d2e0b0fae2f9504ef37659ecdb536002cc5
 
 build:
   noarch: python
