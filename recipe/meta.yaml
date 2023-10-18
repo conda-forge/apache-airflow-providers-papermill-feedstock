@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - apache-airflow >=2.4.0
+    - apache-airflow >=2.5.0
     - papermill >=1.2.1
     # papermill[all]
     - azure-datalake-store >=0.0.30
