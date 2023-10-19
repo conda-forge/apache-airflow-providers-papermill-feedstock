@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-papermill" %}
-{% set version = "3.2.1" %}
+{% set version = "3.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-papermill-{{ version }}.tar.gz
-  sha256: 19878dc3658163b3699ce9963f33989fa06a5e16926985ac18ec9480c2c14a87
+  sha256: a3ccb38e649672e453c4e9f3fb195bc2a7092624c556af388a76191e252fe73c
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - apache-airflow >=2.4.0
+    - apache-airflow >=2.5.0
     - papermill >=1.2.1
     # papermill[all]
     - azure-datalake-store >=0.0.30
