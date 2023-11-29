@@ -37,7 +37,7 @@ requirements:
 
 test:
   imports:
-    - apache_airflow_providers_papermill
+    - airflow.providers.papermill
   commands:
     - pip check
   requires:
