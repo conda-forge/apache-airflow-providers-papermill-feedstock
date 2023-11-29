@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_papermill-{{ version }}.tar.gz
   sha256: 0b5f827bef252773374ce82b051b5d902157b99dd1bb58bc107e5980d3b0a187
 
 build:
@@ -16,12 +16,13 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools >=67.2.0,<68.0.0
+    - python >=3.8,<4.dev0
+    - flit-core >=3.2,<4
     - pip
   run:
     - python >=3.8
     - apache-airflow >=2.5.0
+    - ipykernel
     - papermill >=1.2.1
     # papermill[all]
     - azure-datalake-store >=0.0.30
@@ -36,8 +37,7 @@ requirements:
 
 test:
   imports:
-    - airflow.providers.papermill
-    - airflow.providers.papermill.operators
+    - apache_airflow_providers_papermill
   commands:
     - pip check
   requires:
@@ -45,11 +45,9 @@ test:
 
 about:
   home: https://airflow.apache.org/
-  summary: Provider for Apache Airflow. Implements apache-airflow-providers-papermill package
+  summary: Provider package apache-airflow-providers-papermill for Apache Airflow
   license: Apache-2.0
-  license_file:
-    - LICENSE
-    - NOTICE
+  license_file: airflow/providers/papermill/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-papermill/stable/index.html
   dev_url: https://github.com/apache/airflow/
