@@ -7,7 +7,7 @@ Home: https://airflow.apache.org/
 
 Package license: Apache-2.0
 
-Summary: Provider for Apache Airflow. Implements apache-airflow-providers-papermill package
+Summary: Provider package apache-airflow-providers-papermill for Apache Airflow
 
 Development: https://github.com/apache/airflow/
 
