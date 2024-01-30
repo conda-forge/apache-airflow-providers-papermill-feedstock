@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-papermill" %}
-{% set version = "3.6.0" %}
+{% set version = "3.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_papermill-{{ version }}.tar.gz
-  sha256: 6b9a6963aa8d235d797f09d74133af95a849be41181398b6f48293dc14d187c5
+  sha256: 66a851c04bdb9ba8c4f07b8ff233fce5ad6886d0451c4e5913485ada54506fa6
 
 build:
   noarch: python
@@ -23,13 +23,13 @@ requirements:
     - python >=3.8
     - apache-airflow >=2.6.0
     - ipykernel
-    - papermill >=1.2.1
+    - papermill >=2.4.0
     # papermill[all]
     - azure-datalake-store >=0.0.30
     - azure-storage-blob >=12.1.0
     - requests >=2.21.0
     - gcsfs >=0.2.0
-    - pyarrow
+    - pyarrow >=2.0
     - boto3
 
     - scrapbook
