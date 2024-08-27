@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -25,13 +25,17 @@ requirements:
     - ipykernel
     - pandas >=2.1.2,<2.2
     - papermill >=2.6.0
+    
     # papermill[all]
     - azure-datalake-store >=0.0.30
     - azure-storage-blob >=12.1.0
     - requests >=2.21.0
+    - azure-identity >=1.3.1
     - gcsfs >=0.2.0
+    - pygithub >=1.55
     - pyarrow >=2.0
     - boto3
+    - black >=19.3b0
 
     - scrapbook
     # scrapbook[all] just requires papermill[all] so we're good
