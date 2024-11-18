@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-papermill" %}
-{% set version = "3.8.1" %}
+{% set version = "3.8.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_papermill-{{ version }}.tar.gz
-  sha256: 7f23c938895a2e0f601aa9bc918f0f3c94b7bfb3454ee06a23f1d050851842c7
+  sha256: 35d4fd737f5d0fd48b19faef2bbfd557e620cdbf3bf6f10004af67911eb12741
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.8
     - apache-airflow >=2.8.0
-    - ipykernel
+    - ipykernel >=6.29.4
     - pandas >=2.1.2,<2.2
     - papermill >=2.6.0
 
@@ -37,7 +37,7 @@ requirements:
     - boto3
     - black >=19.3b0
 
-    - scrapbook
+    - scrapbook >=0.5.0
     # scrapbook[all] just requires papermill[all] so we're good
 
 test:
