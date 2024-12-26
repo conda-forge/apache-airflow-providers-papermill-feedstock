@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-papermill" %}
-{% set version = "3.8.2" %}
+{% set version = "3.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_papermill-{{ version }}.tar.gz
-  sha256: 35d4fd737f5d0fd48b19faef2bbfd557e620cdbf3bf6f10004af67911eb12741
+  sha256: ab4fbf559e45c77b1ce8eb9f371f62a956a39decbf776e03288d949b736a86b2
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow >=2.8.0
+    - apache-airflow >=2.9.0
     - ipykernel >=6.29.4
     - pandas >=2.1.2,<2.2
     - papermill >=2.6.0
