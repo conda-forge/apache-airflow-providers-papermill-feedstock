@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-papermill" %}
-{% set version = "3.9.2" %}
+{% set version = "3.10.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_papermill-{{ version }}.tar.gz
-  sha256: 89e304ee9f23d61ad5b3deb67521b33b1ac1a425980b780f702e41b4757d1117
+  sha256: cb94a3deff086b65634196393c0637c03abf16fc3882ff4c46bf91c13d0c0e14
 
 build:
   noarch: python
@@ -20,6 +20,7 @@ requirements:
     - flit-core ==3.11.0
     - pip
   run:
+    - nbconvert >=7.16.1
     - python >={{ python_min }}
     - apache-airflow >=2.9.0
     - ipykernel >=6.29.4
