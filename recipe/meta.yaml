@@ -25,7 +25,8 @@ requirements:
     - apache-airflow >=2.10.0
     - ipykernel >=6.29.4
     - nbconvert >=7.16.1
-    - pandas >=2.1.2
+    # use more restrictive pandas for python 3.13
+    - pandas >=2.2.3
     - papermill >=2.6.0
 
     # papermill[all]
