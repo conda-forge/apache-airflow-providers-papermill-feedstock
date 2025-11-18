@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-papermill" %}
-{% set version = "3.11.3" %}
+{% set version = "3.11.4" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_papermill-{{ version }}.tar.gz
-  sha256: d4313fe8d19aa7b5f301f949140c8d3152b59f17432ff9e18a24ed35407431d0
+  sha256: 589b63b2266f600624a5005b935426d95f3737feb1f4e9c0ed23bf9c5db5911e
 
 build:
   noarch: python
@@ -21,12 +21,13 @@ requirements:
     - flit-core ==3.12.0
     - pip
   run:
+    - apache-airflow-providers-common-compat >=1.8.0
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
     - ipykernel >=6.29.4
     - nbconvert >=7.16.1
     # use more restrictive pandas for python 3.13
-    - pandas >=2.2.3
+    - pandas >=2.1.2
     - papermill >=2.6.0
 
     # papermill[all]
