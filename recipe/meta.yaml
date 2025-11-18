@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-papermill" %}
-{% set version = "3.11.3" %}
-{% set python_min = "3.10" %}
+{% set version = "3.11.4" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_papermill-{{ version }}.tar.gz
-  sha256: d4313fe8d19aa7b5f301f949140c8d3152b59f17432ff9e18a24ed35407431d0
+  sha256: 589b63b2266f600624a5005b935426d95f3737feb1f4e9c0ed23bf9c5db5911e
 
 build:
   noarch: python
@@ -23,10 +22,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - apache-airflow >=2.10.0
-    - ipykernel >=6.29.4
-    - nbconvert >=7.16.1
-    # use more restrictive pandas for python 3.13
-    - pandas >=2.2.3
+    - apache-airflow-providers-common-compat >=1.8.0
     - papermill >=2.6.0
 
     # papermill[all]
@@ -41,7 +37,10 @@ requirements:
     - black >=19.3b0
 
     - scrapbook >=0.5.0
-    # scrapbook[all] just requires papermill[all] so we're good
+    - ipykernel >=6.29.4
+    # more restrictive for python >=3.13
+    - pandas >=2.2.3
+    - nbconvert >=7.16.1
 
 test:
   imports:
@@ -53,10 +52,12 @@ test:
     - pip
 
 about:
-  home: https://airflow.apache.org/
+  home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-papermill for Apache Airflow
   license: Apache-2.0
-  license_file: src/airflow/providers/papermill/LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-papermill/stable/index.html
   dev_url: https://github.com/apache/airflow/
