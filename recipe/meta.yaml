@@ -39,7 +39,7 @@ requirements:
     - scrapbook >=0.5.0
     - ipykernel >=6.29.4
     # more restrictive for python >=3.13
-    - pandas >=2.1.2
+    - pandas >=2.2.3
     - nbconvert >=7.16.1
 
 test:
