@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-papermill
-  version: "3.12.2"
+  version: "3.12.3"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_papermill-${{ version }}.tar.gz
-  sha256: 054f6e7a2251d0a6dc1137387030e389bb3515ba78b9fba117c5a1a1548a323f
+  sha256: 9cd5336d459a935303b240d0caf808f7cc3dd715eb3bffda326b78ae9073244e
 
 build:
   noarch: python
@@ -49,7 +49,9 @@ tests:
       imports:
         - airflow.providers.papermill
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://github.com/apache/airflow/
