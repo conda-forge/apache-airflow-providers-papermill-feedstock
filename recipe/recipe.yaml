@@ -44,6 +44,9 @@ requirements:
     - pandas >=2.3.3
     - nbconvert >=7.16.1
 
+    # bad dependencies:
+    - google-auth-oauthlib !=1.0.0
+
 tests:
   - python:
       imports:
