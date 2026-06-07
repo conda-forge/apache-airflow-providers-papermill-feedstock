@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-papermill
-  version: "3.13.0"
+  version: "3.13.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_papermill-${{ version }}.tar.gz
-  sha256: 63bf2f9ce27897d8be832b657eafcad724af41899fd68bb9d3bcfe3cf41d65b6
+  sha256: c0ee0280354cfd1b2b305cc67889fdfcdaaa5496ebb0f494577d05b86b0908ec
 
 build:
   noarch: python
@@ -43,9 +43,6 @@ requirements:
     # more restrictive for python >=3.14
     - pandas >=2.3.3
     - nbconvert >=7.16.1
-
-    # bad dependencies:
-    - google-auth-oauthlib !=1.0.0
 
 tests:
   - python:
