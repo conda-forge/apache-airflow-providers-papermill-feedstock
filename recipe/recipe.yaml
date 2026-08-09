@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-papermill
-  version: "3.13.1"
+  version: "3.13.2"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_papermill-${{ version }}.tar.gz
-  sha256: c0ee0280354cfd1b2b305cc67889fdfcdaaa5496ebb0f494577d05b86b0908ec
+  sha256: 259252f5cca187c2b2570d4ace74828699a48e1be3f28078a3c5e60ec6e70fe2
 
 build:
   noarch: python
