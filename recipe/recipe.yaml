@@ -42,6 +42,11 @@ requirements:
     # tightest of upstream's floors (python >=3.14)
     - pandas >=2.3.3
     - nbconvert >=7.16.1
+  run_constraints:
+    # temporary: the solver can pick azure-identity 1.17.1 + msal_extensions
+    # 0.3.0, whose conda metadata lacks its portalocker ~=1.0 pin (pip check
+    # fails with portalocker 3.x)
+    - msal_extensions >=1.2
 
 tests:
   - python:
